@@ -5,7 +5,7 @@ import {memo, PropsWithChildren} from 'react';
 
 import {HomepageMeta} from '../../data/dataDef';
 
-const siteUrl = 'https://jinkyu032.github.io';
+const siteUrl = 'https://jinkyu032.vercel.app';
 
 const Page: NextPage<PropsWithChildren<HomepageMeta>> = memo(({children, title, description}) => {
   const {asPath: pathname} = useRouter();

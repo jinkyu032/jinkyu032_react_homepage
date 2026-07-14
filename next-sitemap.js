@@ -1,6 +1,6 @@
 /* eslint-env node */
 module.exports = {
-  siteUrl: 'https://jinkyu032.github.io',
+  siteUrl: 'https://jinkyu032.vercel.app',
   exclude: ['/404*', '/500*'],
   transform: async (config, path) => {
     return {

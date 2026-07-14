@@ -58,6 +58,16 @@ th {
 }
 
 /* Hide alphaXiv widgets that can be injected next to arXiv links. */
-a[href*='alphaxiv.org' i] {
+a[href*='alphaxiv'],
+a[href*='alphaXiv'],
+[id*='alphaxiv'],
+[id*='alphaXiv'],
+[class*='alphaxiv'],
+[class*='alphaXiv'],
+[title*='alphaxiv'],
+[title*='alphaXiv'],
+[aria-label*='alphaxiv'],
+[aria-label*='alphaXiv'],
+.hide-alphaxiv {
   display: none !important;
 }

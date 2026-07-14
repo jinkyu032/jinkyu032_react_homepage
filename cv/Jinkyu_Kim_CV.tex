@@ -1,0 +1,116 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[letterpaper,left=0.82in,right=0.82in,top=0.72in,bottom=0.72in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{ragged2e}
+\usepackage{calc}
+
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+\definecolor{accent}{HTML}{F4511E}
+\definecolor{muted}{HTML}{666666}
+\definecolor{linkblue}{HTML}{1155CC}
+
+\newlength{\leftcol}
+\newlength{\gapcol}
+\newlength{\rightcol}
+\setlength{\leftcol}{1.58in}
+\setlength{\gapcol}{0.26in}
+\setlength{\rightcol}{\textwidth-\leftcol-\gapcol}
+
+\newcommand{\sectionlabel}[1]{%
+  \begin{minipage}[t]{\leftcol}
+    \vspace{0pt}
+    \rule{0.24in}{0.45pt}\\[0.62em]
+    {\fontsize{15}{17}\selectfont\bfseries #1}
+  \end{minipage}%
+}
+
+\newcommand{\sectionbody}[1]{%
+  \hspace{\gapcol}%
+  \begin{minipage}[t]{\rightcol}
+    \vspace{0pt}
+    \rule{\rightcol}{2.7pt}\\[0.74em]
+    #1
+  \end{minipage}\par
+}
+
+\newcommand{\sectionrow}[2]{%
+  \sectionlabel{#1}\sectionbody{#2}\vspace{1.08em}
+}
+
+\newcommand{\educationitem}[4]{%
+  {\fontsize{12.2}{14.2}\selectfont\bfseries #1} / {\fontsize{12.2}{14.2}\selectfont #2}\\[-0.05em]
+  {\color{muted}#3}\\[0.42em]
+  #4\par
+}
+
+\newcounter{pubcount}
+\newcommand{\publication}[3]{%
+  \stepcounter{pubcount}%
+  \hangindent=1.25em\hangafter=1
+  \thepubcount. #1, ``#2,'' #3.\par\vspace{0.62em}
+}
+
+\newcommand{\experienceitem}[2]{%
+  {\fontsize{12.2}{14.2}\selectfont\bfseries #1}\\[-0.05em]
+  {\color{muted}#2}\par
+}
+
+\begin{document}
+\fontsize{10.7}{13.0}\selectfont
+
+\begin{minipage}[t]{\leftcol}
+  \vspace{0pt}
+  {\fontsize{27}{31}\selectfont\bfseries Jinkyu\\Kim}\\[0.35em]
+  {\fontsize{14.3}{17}\selectfont\bfseries\color{accent}Ph.D. Student}
+\end{minipage}%
+\hspace{\gapcol}%
+\begin{minipage}[t]{\rightcol}
+  \vspace{0.08in}
+  \rule{\rightcol}{2.7pt}\\[0.55em]
+  {\fontsize{13.8}{16}\selectfont\bfseries Jinkyu Kim}\\[0.7em]
+  {\color{linkblue}\href{https://jinkyu032.vercel.app}{https://jinkyu032.vercel.app}}\\[1.45em]
+  {\color{accent}\href{mailto:jinkyu@snu.ac.kr}{jinkyu@snu.ac.kr}}\\[1.35em]
+\end{minipage}\par
+
+\vspace{0.74em}
+
+\sectionrow{About}{%
+  \RaggedRight
+  I am a Ph.D. student at the SNU Computer Vision Lab under the supervision of Prof. Bohyung Han.
+  My research interests include machine learning and computer vision, with recent work on diffusion sampler optimization and federated learning.
+}
+
+\sectionrow{Education}{%
+  \educationitem{Seoul National University}{Ph.D. Candidate}{Mar 2021 - Current}{Electrical and Computer Engineering}
+  \vspace{1.08em}
+  \educationitem{Seoul National University}{B.S.}{Mar 2014 - Feb 2021}{Electrical and Computer Engineering}
+}
+
+\sectionrow{Publication}{%
+  \RaggedRight
+  \publication{Jinkyu Kim*, Jinyoung Choi*, and Bohyung Han}{D2PO: Optimizing Diffusion Samplers via Dynamic Preference}{Proc. European Conference on Computer Vision (\textbf{ECCV}), 2026}
+  \publication{Seonguk Seo*, Jinkyu Kim*, Geeho Kim*, and Bohyung Han}{Relaxed Contrastive Learning for Federated Learning}{Proc. Computer Vision and Pattern Recognition (\textbf{CVPR}), 2024}
+  \publication{Geeho Kim*, Jinkyu Kim*, and Bohyung Han}{Communication-Efficient Federated Learning with Accelerated Client Gradient}{Proc. Computer Vision and Pattern Recognition (\textbf{CVPR}), 2024}
+  \publication{Jinkyu Kim*, Geeho Kim*, and Bohyung Han}{Multi-Level Branched \mbox{Regularization} for Federated Learning}{Proc. International Conference on Machine Learning (\textbf{ICML}), 2022}
+}
+
+\sectionrow{Experience}{%
+  \experienceitem{Republic of Korea Airforce, Wonju, Korea}{Apr 2016 - Apr 2018}
+  \vspace{1.08em}
+  \experienceitem{Intern, Samsung Seoul R\&D Campus, Korea}{Jun 2019 - Aug 2019}
+}
+
+\end{document}

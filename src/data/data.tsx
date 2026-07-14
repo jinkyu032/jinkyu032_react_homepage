@@ -386,7 +386,7 @@ export const socialLinks: Social[] = [
   {
     label: 'CV',
     Icon: CVIcon,
-    href: 'https://drive.google.com/file/d/1ch2FUJD9PP17DKk0JU_6BXgpbdYPqX1A/view?usp=sharing',
+    href: '/pdf/Jinkyu_Kim_CV.pdf',
   },
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/jinkyu032'},
   {

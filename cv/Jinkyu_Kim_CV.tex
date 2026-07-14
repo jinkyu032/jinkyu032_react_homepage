@@ -25,9 +25,11 @@
 \newlength{\leftcol}
 \newlength{\gapcol}
 \newlength{\rightcol}
+\newlength{\pubhang}
 \setlength{\leftcol}{1.58in}
 \setlength{\gapcol}{0.26in}
 \setlength{\rightcol}{\textwidth-\leftcol-\gapcol}
+\setlength{\pubhang}{1.58em}
 
 \newcommand{\sectionlabel}[1]{%
   \begin{minipage}[t]{\leftcol}
@@ -59,8 +61,9 @@
 \newcounter{pubcount}
 \newcommand{\publication}[3]{%
   \stepcounter{pubcount}%
-  \hangindent=1.25em\hangafter=1
-  \thepubcount. #1, ``#2,'' #3.\par\vspace{0.62em}
+  \par\noindent
+  \hangindent=\pubhang\hangafter=1
+  \makebox[\pubhang][l]{\thepubcount.}#1, ``#2,'' #3.\par\vspace{0.62em}
 }
 
 \newcommand{\experienceitem}[2]{%
@@ -82,7 +85,7 @@
   \rule{\rightcol}{2.7pt}\\[0.55em]
   {\fontsize{13.8}{16}\selectfont\bfseries Jinkyu Kim}\\[0.7em]
   {\color{linkblue}\href{https://jinkyu032.vercel.app}{https://jinkyu032.vercel.app}}\\[1.45em]
-  {\color{accent}\href{mailto:jinkyu@snu.ac.kr}{jinkyu@snu.ac.kr}}\\[1.35em]
+  \href{mailto:jinkyu@snu.ac.kr}{jinkyu@snu.ac.kr}\\[1.35em]
 \end{minipage}\par
 
 \vspace{0.74em}

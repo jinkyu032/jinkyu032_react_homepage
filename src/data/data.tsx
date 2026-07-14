@@ -291,7 +291,7 @@ export const publications: PublicationsItem[] = [
     authors: 'Jinkyu Kim, Jinyoung Choi, Bohyung Han',
     linkurl: 'https://arxiv.org/abs/2607.06609',
     title: 'D2PO: Optimizing Diffusion Samplers via Dynamic Preference',
-    content: <p>ECCV 2026 (Accepted)</p>,
+    content: <p>ECCV 2026</p>,
   },
   {
     authors: 'Seonguk Seo*, Jinkyu Kim*, Geeho Kim*, Bohyung Han',
